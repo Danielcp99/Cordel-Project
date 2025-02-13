@@ -1,0 +1,162 @@
+@charset 'UTF-8';
+
+@import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&family=Sriracha&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #ffffff;
+    background-image: url(natural-landscape-background-theme_.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    width: 100%;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+main {
+    background-color: rgba(255, 255, 255, 0.500);
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 90%;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.500);
+    text-align: left;
+}
+
+header {
+    background-color: #007e32e8;
+    color: rgba(255, 255, 255, 0.948);
+    padding: 35px;
+    text-align: center;
+}
+
+header h1,
+header p {
+    font-family: "Passion One", serif;
+}
+
+header h1 {
+    font-weight: 400;
+    font-size: 45px;
+    font-style: normal;
+}
+
+header p {
+    font-size: 20px;
+}
+
+.s-1,
+.s-2 {
+    min-height: 400px;
+    text-align: left;
+    margin: 0;
+    padding: 20px 0;
+}
+
+.s-2 {
+    border-top: 2px solid rgba(0, 0, 0, 0.20);
+}
+
+.ul-1,
+.ul-2,
+.ul-3,
+.ul-4 {
+    list-style: none;
+    text-align: left;
+    display: inline-block;
+    font-size: 22px;
+    padding: 30px;
+    margin: 35px 0;
+    width: calc(100% - 60px);
+}
+
+.ul-1 li,
+.ul-2 li,
+.ul-3 li,
+.ul-4 li {
+    font-family: "Sriracha", serif;
+    font-weight: bold;
+    line-height: 1.5;
+}
+
+.ul-2 li {
+    color: #dfffb5;
+    text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.662);
+}
+
+.fig-1 {
+    background-image: url(close-up-green-leaves-nature_.jpg);
+    background-color: rgba(255, 255, 255, 0.786);
+    min-height: 400px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+footer {
+    font-size: 9px;
+    font-family: sans-serif;
+    padding: 15px;
+    text-align: center;
+}
+
+footer a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+    main {
+        width: 95%;
+    }
+
+    header h1 {
+        font-size: 35px;
+    }
+
+    header p {
+        font-size: 18px;
+    }
+
+    .ul-1,
+    .ul-2,
+    .ul-3,
+    .ul-4 {
+        font-size: 18px;
+        padding: 20px;
+        margin: 20px 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header {
+        padding: 20px;
+    }
+
+    header h1 {
+        font-size: 28px;
+    }
+
+    header p {
+        font-size: 16px;
+    }
+
+    .ul-1,
+    .ul-2,
+    .ul-3,
+    .ul-4 {
+        font-size: 16px;
+        padding: 15px;
+        margin: 15px 0;
+    }
+
+    .s-1,
+    .s-2,
+    .fig-1 {
+        min-height: 300px;
+    }
+}
