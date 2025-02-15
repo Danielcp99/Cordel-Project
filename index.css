@@ -1,10 +1,21 @@
 @charset 'UTF-8';
 
-@import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&family=Sriracha&display=swap');
+:root {
+    --color-primary: #007e32;
+    --color-text: #333;
+    --color-highlight: #DFFFB5;
+    --font-title: 'Passion One', cursive;
+    --font-text: 'Sriracha', cursive;
+}
 
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
 }
 
 body {
@@ -16,147 +27,154 @@ body {
     width: 100%;
     background-position: center center;
     background-attachment: fixed;
+    font-size: 1.6rem;
+    line-height: 1.6;
+    color: var(--color-text);
 }
 
 main {
-    background-color: rgba(255, 255, 255, 0.500);
+    background-color: rgba(255, 255, 255, 0.7);
     margin: 0 auto;
-    max-width: 1200px;
+    max-width: 120rem;
     width: 90%;
-    box-shadow: 0 0 50px rgba(0, 0, 0, 0.500);
+    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.5);
     text-align: left;
 }
 
 header {
-    background-color: #007e32e8;
-    color: rgba(255, 255, 255, 0.948);
-    padding: 35px;
+    background-color: var(--color-primary);
+    color: rgba(255, 255, 255, 0.95);
+    padding: 3.5rem;
     text-align: center;
+    position: relative;
+}
+
+header::after {
+    content: '';
+    position: absolute;
+    bottom: -1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%;
+    height: 2px;
+    background-color: rgba(255, 255, 255, 0.3);
 }
 
 header h1,
 header p {
-    font-family: "Passion One", serif;
+    font-family: var(--font-title);
 }
 
 header h1 {
-    font-weight: 400;
-    font-size: 45px;
-    font-style: normal;
+    font-weight: 700;
+    font-size: 4.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 header p {
-    font-size: 20px;
+    font-size: 2rem;
+    font-style: italic;
 }
 
-.s-1,
-.s-2 {
-    min-height: 400px;
-    text-align: left;
-    margin: 0;
-    padding: 20px 0;
+.cordel-section {
+    padding: 10vh 4rem;
+    position: relative;
 }
 
-.s-2 {
-    border-top: 2px solid rgba(0, 0, 0, 0.20);
+.cordel-section.normal {
+    background-color: rgba(255, 255, 255, 0.3);
 }
 
-.ul-1,
-.ul-2,
-.ul-3,
-.ul-4 {
-    list-style: none;
-    text-align: left;
-    display: inline-block;
-    font-size: 22px;
-    padding: 30px;
-    margin: 35px 0;
-    width: calc(100% - 60px);
+.cordel-section:not(:last-of-type) {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-.ul-1 li,
-.ul-2 li,
-.ul-3 li,
-.ul-4 li {
-    font-family: "Sriracha", serif;
-    font-weight: bold;
-    line-height: 1.5;
-}
-
-.ul-2 li {
-    color: #dfffb5;
-    text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.662);
-}
-
-.fig-1 {
+.parallax {
     background-image: url(close-up-green-leaves-nature_.jpg);
-    background-color: rgba(255, 255, 255, 0.786);
-    min-height: 400px;
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-attachment: fixed;
     background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.parallax::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.highlight {
+    color: var(--color-highlight);
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.8);
+}
+
+.cordel-text {
+    font-family: var(--font-text);
+    font-size: 2.2rem;
+    line-height: 1.5;
+    position: relative;
+    max-width: 70rem;
+    margin: 0 auto;
+    padding: 2rem;
+    background: none;
+    z-index: 1;
 }
 
 footer {
-    font-size: 9px;
+    font-size: 1.2rem;
     font-family: sans-serif;
-    padding: 15px;
+    padding: 2rem;
     text-align: center;
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+footer div:first-child {
+    margin-bottom: 0.5rem;
 }
 
 footer a {
     text-decoration: none;
     font-weight: bold;
+    color: var(--color-primary);
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #005a24;
+    text-decoration: underline;
 }
 
 @media screen and (max-width: 768px) {
+    html {
+        font-size: 55%;
+    }
+
     main {
         width: 95%;
     }
 
-    header h1 {
-        font-size: 35px;
-    }
-
-    header p {
-        font-size: 18px;
-    }
-
-    .ul-1,
-    .ul-2,
-    .ul-3,
-    .ul-4 {
-        font-size: 18px;
-        padding: 20px;
-        margin: 20px 0;
+    .cordel-section {
+        padding: 8vh 2rem;
     }
 }
 
 @media screen and (max-width: 480px) {
+    html {
+        font-size: 50%;
+    }
+
     header {
-        padding: 20px;
+        padding: 2.5rem 1.5rem;
     }
 
-    header h1 {
-        font-size: 28px;
-    }
-
-    header p {
-        font-size: 16px;
-    }
-
-    .ul-1,
-    .ul-2,
-    .ul-3,
-    .ul-4 {
-        font-size: 16px;
-        padding: 15px;
-        margin: 15px 0;
-    }
-
-    .s-1,
-    .s-2,
-    .fig-1 {
-        min-height: 300px;
+    .cordel-section {
+        padding: 6vh 1.5rem;
     }
 }
